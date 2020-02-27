@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devbridge</title>
+</head>
+<body>
+    <script>
+        //----------FUNKCIJA KURI SUDEDA ZODZIUS I OBJEKTA IR SUSKAIČIUOJA JU SKAICIU------
+        function FrequencyCount(string) {
+            var words = string.toUpperCase();
+            words = words.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")
+            words = words.split(" ");
+            console.log(words);
+            console.log("Your text: ''"+string+"'' words frequency:");
+            let obj = {};
+            words.forEach(word => {
+                //no repeat
+                if (!obj[word]) {
+                    obj[word] = 0;
+                }
+                    obj[word] += 1;
+            });
+        return console.log(obj);
+        }
+        FrequencyCount('My bike and my book');
+ //----------FUNKCIJA KURI SUDEDA ZODZIO ILGI(KEY VALUE) I OBJEKTA IR SUSKAIČIUOJA KIEK TOKIU PASIKARTOJANČIO ILGIO VIENETU------
+        function LegthFrequencyCount(string) {
+            var words = string.toUpperCase();
+            words = words.replace(/[.,\/#!?$%\^&\*;:{}=\-_`~()]/g,"")
+            words = words.split(" ");
+            console.log(words);
+            console.log("Your text: ''"+string+"'' words frequency:");
+            let numbers = [];
+            words.forEach(word =>{
+                let a = word.length;
+                let b = a.toString();
+                numbers.push(' '+b);
+                return numbers;
+            });
+            console.log(numbers);
+            let obj1 = {};
+            numbers.forEach(numb => {
+                //no repeat
+                if (!obj1[numb]) {
+                    obj1[numb] = 0;
+                }
+                    obj1[numb] += 1;
+            });
+        return console.log(obj1);
+        }
+        LengthFrequencyCount('My bike and my book');
+    </script>
+</body>
+</html>
